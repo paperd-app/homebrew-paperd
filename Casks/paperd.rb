@@ -1,6 +1,6 @@
 cask "paperd" do
   version "0.1.0"
-  sha256 "df308ffaaf82d71f4c5038a7506737389abb7a918f637e3181e79e85e286b3d5"
+  sha256 "156a676ca61d4ef3c32c692e88a683af9323093f17a7111e535aea96b177a993"
 
   url "https://github.com/paperd-app/paperd/releases/download/v#{version}/paperd-#{version}.zip"
   name "paperd"
