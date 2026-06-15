@@ -1,12 +1,28 @@
 # homebrew-paperd
 
-[paperd](https://github.com/paperd-app/paperd)（ローカルAI検索 + Claude連携の文献管理アプリ）のHomebrew tapです。
+Homebrew tap for [paperd](https://github.com/paperd-app/paperd) — a native macOS reference
+manager with local-AI full-text semantic search and MCP integration for Claude.
+
+## Install
 
 ```sh
 brew install --cask paperd-app/paperd/paperd
 ```
 
-uv（Pythonワーカーの実行環境）も依存として自動インストールされます。
+This also installs `uv` (the runtime for paperd's local Python worker) as a dependency.
 
-> 注: cask定義は paperd 本体の `scripts/release.sh` がリリースごとに自動生成したものです。
-> 初回の公式リリース（notarized版）公開までインストールは機能しません。
+After installing, open paperd and run **Settings → Worker → Set up environment** to download
+the local AI models (a few minutes, ~2–3 GB).
+
+## Update / uninstall
+
+```sh
+brew upgrade --cask paperd
+brew uninstall --cask paperd          # add --zap to also remove app data
+```
+
+---
+
+The cask in `Casks/paperd.rb` is generated per release by `scripts/release.sh` in the
+[main repo](https://github.com/paperd-app/paperd). Please file issues at
+[paperd-app/paperd/issues](https://github.com/paperd-app/paperd/issues).
