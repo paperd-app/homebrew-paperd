@@ -9,10 +9,11 @@ manager with local-AI full-text semantic search and MCP integration for Claude.
 brew install --cask paperd-app/paperd/paperd
 ```
 
-This also installs `uv` (the runtime for paperd's local Python worker) as a dependency.
+paperd requires Python 3.11+ for its local worker. If Python is not installed, the app's
+**Settings → Worker** screen will show the install command.
 
-After installing, open paperd and run **Settings → Worker → Set up environment** to download
-the local AI models (a few minutes, ~2–3 GB).
+After installing, open paperd and run **Settings → Worker → Set up environment** to create
+the worker virtualenv and download the local AI models (a few minutes, ~2–3 GB).
 
 ## Update / uninstall
 
